@@ -1,0 +1,27 @@
+{
+    "components": {
+        "Premise": {
+            "short": "Premise"
+        },
+        "Claim": {
+            "short": "Claim"
+        },
+        "MajorClaim": {
+            "short": "MajorClaim"
+        }
+    },
+    "relations": {
+        "supports": {
+            "short": "Support",
+            "symmetric": false
+        },
+        "attacks": {
+            "short": "Attack",
+            "symmetric": false
+        },
+        "loop": {
+            "short": "Loop",
+            "symmetric": false
+        }
+    }
+}
