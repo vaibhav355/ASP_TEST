@@ -6,7 +6,7 @@ import numpy as np
 import torch
 
 from torch.optim import AdamW
-from util.multigpu_fused_adam import FusedAdam
+# from util.multigpu_fused_adam import FusedAdam
 
 from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.data import DataLoader
