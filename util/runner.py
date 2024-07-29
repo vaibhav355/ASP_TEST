@@ -10,7 +10,7 @@ import numpy as np
 import torch
 
 from torch.optim import AdamW
-from util.multigpu_fused_adam import FusedAdam
+# from util.multigpu_fused_adam import FusedAdam
 
 from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.data import DataLoader
@@ -121,7 +121,7 @@ class Runner:
         loss_history = []  # Full history of effective loss; length equals total update steps
         max_f1, max_f1_test = 0, 0
         start_time = time.time()
-        if type(self.optimizer) == FusedAdam:
+        if type(self.optimizer) == AdamW:
             self.optimizer.zero_grad()
         else:
             self.optimizer.zero_grad(set_to_none=True)
@@ -166,7 +166,7 @@ class Runner:
                         )
                     self.optimizer.step()
                     self.scheduler.step()
-                    if type(self.optimizer) == FusedAdam:
+                    if type(self.optimizer) == AdamW:
                         self.optimizer.zero_grad()
                     else:
                         self.optimizer.zero_grad(set_to_none=True)
