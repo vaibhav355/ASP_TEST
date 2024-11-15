@@ -19,9 +19,9 @@
             "short": "Attack",
             "symmetric": false
         },
-       // "loop": { 
-        //    "short": "Loop",
-         //   "symmetric": false
-        //}
+       "loop": { 
+            "short": "Loop",
+            "symmetric": false
+        }
     }
 }
