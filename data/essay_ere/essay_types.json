@@ -19,7 +19,7 @@
             "short": "Attack",
             "symmetric": false
         },
-        "loop": {
+        "loop": { # Have to remove this whole dict
             "short": "Loop",
             "symmetric": false
         }
